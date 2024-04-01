@@ -1,4 +1,4 @@
-import http from "../..";
+import { http } from "../..";
 
 const deleteBook = async (id: number | null) => {
   try {

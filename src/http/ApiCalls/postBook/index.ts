@@ -1,4 +1,4 @@
-import http from "../..";
+import { http } from "../..";
 import { IBookInfo } from "../../../interfaces/IBookInfo";
 import formDataSerializer from "./formSerializer";
 
@@ -14,6 +14,7 @@ const postBook = async (selectedBook: IBookInfo | null, tab: string) => {
 
         if (response.status === 200) {
           console.log("Requisição POST bem-sucedida");
+          console.log(formData);
         } else {
           console.error("Erro ao fazer a requisição POST");
           console.log(response);

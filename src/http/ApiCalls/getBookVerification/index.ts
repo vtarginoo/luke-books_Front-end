@@ -1,6 +1,6 @@
 // Verifica a existência do Livro por meio do GoogleID
 
-import http from "../..";
+import { http } from "../..";
 
 const getBookVerification = async (idGoogle: string) => {
   try {

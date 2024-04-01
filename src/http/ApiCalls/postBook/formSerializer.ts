@@ -92,11 +92,11 @@ const formDataSerializer = (selectedBook: IBookInfo, tab: string) => {
       formData.append("status", tab);
       formData.append("dataInsercao", "");
 
+      // Adicione os links de imagem diretamente ao FormData, se estiverem disponíveis
       const adjustedImageLinks = adjustImageLinks(selectedBook.imageLinks);
-      // Adicione os links de imagem ao FormData, se estiverem disponíveis
       if (adjustedImageLinks) {
-        const imageLinksString = JSON.stringify(adjustedImageLinks);
-        formData.append("imageLinks", imageLinksString);
+        // Adicionar a string JSON ao FormData
+        formData.append("imageLinks", JSON.stringify(adjustedImageLinks));
       }
 
       if (selectedBook.industryIdentifiers) {
@@ -115,6 +115,7 @@ const formDataSerializer = (selectedBook: IBookInfo, tab: string) => {
       }
     }
 
+    console.log(formData);
     return formData;
   }
 

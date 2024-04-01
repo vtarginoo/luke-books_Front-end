@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/* Estilos para diferentes pesos da fonte Inter */
+.inter-light {
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+}
+
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.inter-bold {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}

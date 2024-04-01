@@ -1,4 +1,4 @@
-import http from "../..";
+import { http } from "../..";
 
 const putBookStatus = async (id: number | null, status: string) => {
   try {

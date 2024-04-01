@@ -7,7 +7,7 @@ export const listaNavItens = atom<INavItem[]>({
     {
       key: 1,
       label: "Reader Hub",
-      path: "/",
+      path: "/hub",
     },
     {
       key: 2,

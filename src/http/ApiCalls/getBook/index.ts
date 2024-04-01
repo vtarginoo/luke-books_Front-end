@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import http from "../..";
+import { http } from "../..";
 import { IBookInfo } from "../../../interfaces/IBookInfo";
 
 const getBookByStatus = async (tab: string) => {
