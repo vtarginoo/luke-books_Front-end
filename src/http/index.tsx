@@ -5,8 +5,11 @@ import axios from "axios";
 // Obtenha o token JWT do SessionStorage
 const token = sessionStorage.getItem("authToken");
 
+//// Implementação do Deploy
 export const http = axios.create({
-  baseURL: "http://localhost:5000",
+  // baseURL: "http://localhost:5000",
+  baseURL: "https://rest-api-savebooks-faj3go77ja-uc.a.run.app",
+
   headers: {
     Accept: "application/json",
     "Content-Type": "multipart/form-data",
@@ -17,7 +20,8 @@ export const http = axios.create({
 /// Chamadas Api Serviço 2 (Login) - Header sem Token JWT
 
 export const httplog = axios.create({
-  baseURL: "http://localhost:6050",
+  // baseURL: "http://localhost:6050",
+  baseURL: "https://rest-api-login-faj3go77ja-uc.a.run.app",
   headers: {
     Accept: "application/json",
     "Content-type": "application/json",
@@ -27,7 +31,9 @@ export const httplog = axios.create({
 /// Chamadas Api Serviço 2 (Logout) Header com Token JWT
 
 export const httplogToken = axios.create({
-  baseURL: "http://localhost:6050",
+  // baseURL: "http://localhost:6050",
+  baseURL: "https://rest-api-login-faj3go77ja-uc.a.run.app",
+
   headers: {
     Accept: "application/json",
     "Content-type": "application/json",
