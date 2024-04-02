@@ -1,6 +1,6 @@
 import { Card, Typography } from "antd";
 import styled from "styled-components";
-import { IBook } from "../../../interfaces/IBook.Infotsx";
+import { IBookInfo } from "../../../interfaces/IBookInfo";
 
 const { Meta } = Card;
 const { Text } = Typography;
@@ -32,19 +32,19 @@ const BookTitle = styled(Text)`
   font-weight: bold;
 `;
 
-const CardLivro: React.FC<{ books: IBook[] }> = ({ books }) => {
+const CardLivro: React.FC<{ books: IBookInfo[] }> = ({ books }) => {
   return (
     <>
       {books.map((book, index) => (
         <StyledCard key={index}>
           <BookImage
             alt={book.title}
-            src={book.thumbnail}
+            src={book.imageLinks?.thumbnail}
           />
           <BookInfo>
             <Meta
               title={<BookTitle>{book.title}</BookTitle>}
-              description={<Text>{book.author}</Text>}
+              description={<Text>{book.autores.join(", ")}</Text>}
             />
           </BookInfo>
         </StyledCard>
