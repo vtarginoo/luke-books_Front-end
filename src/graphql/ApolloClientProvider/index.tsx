@@ -7,7 +7,7 @@ type Props = { children: ReactElement };
 
 const client = new ApolloClient({
   // uri: "http://localhost:8001/graphql/",
-  uri: "https://gql-straberryapi-pr47kfghya-uc.a.run.app",
+  uri: "https://gql-straberryapi-faj3go77ja-uc.a.run.app/graphql/",
   cache: new InMemoryCache(),
 });
 
