@@ -32,13 +32,12 @@ const SectionCategoria = () => {
   const [SelectedBook, setSelectedBook] = useRecoilState(SelectedBookState);
   const tabCategoria = useRecoilValue(listaCategoria);
   const tabList = tabCategoria.map((categoria: ICategoria) => ({
-    key: categoria.key!,
+    key: String(categoria.key),
     tab: categoria.tab,
   }));
 
-  // Antes da mudança ele escolhe um valor padrão que é o key 1
   const [activeTabKey, setActiveTabKey] = useState<string>(
-    tabCategoria[0]?.key ?? ""
+    String(tabCategoria[0]?.key) || ""
   );
 
   const onTabChange = (key: string) => {

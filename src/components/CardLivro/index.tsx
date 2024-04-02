@@ -1,7 +1,7 @@
 import { Card, Typography } from "antd";
 import styled from "styled-components";
-import { IBookInfo } from "../../interfaces/IBookInfo.tsx";
 import { Link } from "react-router-dom";
+import { IBookInfo } from "../../interfaces/IBookInfo";
 
 const { Meta } = Card;
 const { Text } = Typography;

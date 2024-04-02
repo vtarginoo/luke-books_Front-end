@@ -1,5 +1,5 @@
 export interface ICategoria {
-  key?: React.Key;
+  key?: React.Key | number | string;
   tab: string;
   ativo?: boolean;
 }
